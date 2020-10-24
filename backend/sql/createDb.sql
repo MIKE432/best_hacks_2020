@@ -1,16 +1,16 @@
 CREATE TABLE Users(
-    id          INT PRIMARY KEY NOT NULL,
-    username    CHAR(25) NOT NULL,
-    firstname   CHAR(50) NOT NULL,
-    surname     CHAR(50) NOT NULL
+    userID          INT PRIMARY KEY NOT NULL,
+    username        CHAR(25) NOT NULL,
+    firstname       CHAR(50) NOT NULL,
+    surname         CHAR(50) NOT NULL
 );
 
 CREATE TABLE Petitions (
-    id          INT PRIMARY KEY NOT NULL,
-    title       CHAR(50) NOT NULL,
-    descript    TEXT NOT NULL,
-    likeCount   INT NOT NULL,
-    userID      INT NOT NULL
+    petitionID      INT PRIMARY KEY NOT NULL,
+    title           CHAR(50) NOT NULL,
+    descript        TEXT NOT NULL,
+    likeCount       INT NOT NULL,
+    userID          INT NOT NULL
 );
 
 INSERT INTO Users VALUES (1, 'Dejmi', 'Damian', 'Zoltowski');
@@ -22,4 +22,4 @@ INSERT INTO Petitions VALUES (2, 'Petition2', 'No to jest petycja 2', 5, 3);
 INSERT INTO Petitions VALUES (3, 'Petition3', 'No to jest petycja 3', 12, 1);
 
 ALTER TABLE ONLY Petitions 
-    ADD CONSTRAINT petitions_fk FOREIGN KEY (userID) REFERENCES Users(id);
+    ADD CONSTRAINT petitions_fk FOREIGN KEY (userID) REFERENCES Users(userID);
