@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     title: { type: DataTypes.CHAR(50), allowNull: false },
     description: { type: DataTypes.INTEGER, allowNull: false},
+    likeCount: { type: DataTypes.INTEGER, allowNull: false}
     }, {
         tableName: 'Petitions',
         createdAt: false,
