@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
+    "glob": "^7.1.6",
+    "nodemon": "^2.0.6",
+    "path": "^0.12.7",
+    "sequelize": "^6.3.5"
+  },
+  "scripts": {
+    "start": "concurrently \"NODE_ENV=dev nodemon cross-env  backend/index.js\" \"cd frontend && yarn start\" "
+  },
+  "name": "best_hacks_2020",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/MIKE432/best_hacks_2020.git",
+  "author": "MIKE432 <michal.raszczuk.apusoft@gmail.com>",
+  "license": "MIT"
+}
