@@ -10,6 +10,9 @@ const sequelize = new sequelizeConstructor(sequelizeDb.databaseName, sequelizeDb
 const db = {};
 
 paths.models.map(modelPath => {
-    const model = sequelize.import(path.resolve(modelPath));
+    // const model = sequelize.import(path.resolve(modelPath));
+    const model = require(path.resolve(modelPath))(sequelize, sequelizeConstructor.DataTypes)
     db[model.name] = model;
 })
+
+module.exports = db
