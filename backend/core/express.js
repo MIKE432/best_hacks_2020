@@ -3,12 +3,16 @@ const express = require('express'),
       defaults = require('../defaults/defaults'),
       glob = require('glob'),
       path = require('path'),
-      config = require('../core/config')
+      config = require('../core/config'),
+      bodyParser = require('body-parser'),
+      cors = require('cors')
 
 
 exports.initExpress = () => {
     let app = express();
-
+    app.use(cors());
+    app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(bodyParser.json());
     const routes = config.routes
 
     routes.forEach((route) => {
