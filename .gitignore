@@ -25,3 +25,4 @@ yarn-error.log*
 
 /backend/defaults/local-defaults.js
 /backend/defaults/local-defaults-override.js
+.vscode
