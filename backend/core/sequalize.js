@@ -1,8 +1,8 @@
 const
-    sequelizeDb = require('../../defaults/defaults').sequelizeDb,
+    sequelizeDb = require('../defaults/defaults').sequelizeDb,
     sequelizeConstructor = require('sequelize'),
     path = require('path'),
-    paths = require('.config');
+    paths = require('./config');
 
 
 const sequelize = new sequelizeConstructor(sequelizeDb.databaseName, sequelizeDb.username, sequelizeDb.password, sequelizeDb.options)

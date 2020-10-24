@@ -1,5 +1,5 @@
 const petitionController = require('../controllers/petitionController');
 
 module.exports = (app) => {
-    app.route('/petition/test').get(petitionController.getTestPetition)
+    app.route('/api/petition/test').get(petitionController.getTestPetition)
 }
