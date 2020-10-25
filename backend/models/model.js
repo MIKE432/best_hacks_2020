@@ -1,1 +1,0 @@
-//always return sequelizable object
