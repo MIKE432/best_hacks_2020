@@ -1,5 +1,3 @@
-//always return sequelizable object
-
 module.exports = (sequelize, DataTypes) => {
     var petition = sequelize.define('petitions', {
     id: {

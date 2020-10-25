@@ -1,13 +1,13 @@
 CREATE TABLE Users(
     userID          INT PRIMARY KEY NOT NULL,
-    username        CHAR(25) NOT NULL,
-    firstname       CHAR(50) NOT NULL,
-    surname         CHAR(50) NOT NULL
+    username        TEXT NOT NULL,
+    firstname       TEXT NOT NULL,
+    surname         TEXT NOT NULL
 );
 
 CREATE TABLE Petitions(
     petitionID      INT PRIMARY KEY NOT NULL,
-    title           CHAR(50) NOT NULL,
+    title           TEXT NOT NULL,
     descript        TEXT NOT NULL,
     likeCount       INT NOT NULL,
     userID          INT NOT NULL

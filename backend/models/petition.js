@@ -1,5 +1,3 @@
-// const { Sequelize } = require("sequelize/types");
-
 module.exports = (sequelize, DataTypes) => {
     var petition = sequelize.define('petitions', {
     petitionid: {
@@ -7,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         autoIncrement: true
     },
-    title: { type: DataTypes.CHAR(50), allowNull: false },
+    title: { type: DataTypes.TEXT, allowNull: false },
     descript: { type: DataTypes.TEXT, allowNull: false},
     likecount: { type: DataTypes.INTEGER, allowNull: false}
     }, {

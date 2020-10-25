@@ -5,9 +5,9 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true    
         },          
-        username: { type: DataTypes.CHAR(25), allowNull: false},
-        firstname: { type: DataTypes.CHAR(50), allowNull: false},
-        surname: { type: DataTypes.CHAR(50), allowNull: false}
+        username: { type: DataTypes.TEXT, allowNull: false},
+        firstname: { type: DataTypes.TEXT, allowNull: false},
+        surname: { type: DataTypes.TEXT, allowNull: false}
     }, {
         tableName: 'users',
         freezeTableName: true,
