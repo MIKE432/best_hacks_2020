@@ -9,7 +9,8 @@ const PetitionItem = (props) => {
         descript,
         likecount,
         petitionid,
-        callBack
+        callBack,
+        petitor
     } = props
 
     const handleClick = () => {
@@ -21,6 +22,7 @@ const PetitionItem = (props) => {
             <div className='petition-item-top-container'>
                 <h4>{title}</h4>
                 <p>{descript}</p>
+                <p><i><b>~ {petitor}</b></i></p>
             </div>
             <div className='petition-item-bottom-container'>
                 <div  className='petition-item-bottom-like'>
