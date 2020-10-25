@@ -17,3 +17,8 @@ exports.createPetition = handleErrors(async (req, res) => {
     const newPetition = await petitionService.createPetition(req.body)
     res.sendStatus(200)
 })
+
+exports.updatePetition = handleErrors(async (req, res) => {
+    const updatedPetition = await petitionService.updateLikes(req.params.petition_id)
+    res.sendStatus(200)
+})

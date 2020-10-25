@@ -6,7 +6,7 @@ exports.getPetition = async (petitionid) => {
 }
 
 exports.getAllPetitions = async () => {
-    const allPetitions = await db.petitions.findAll()
+    const allPetitions = await db.petitions.findAll({ order: [['likecount', 'DESC']] })
     return allPetitions
 }
 
@@ -17,4 +17,9 @@ exports.createPetition = async (petition) => {
         likecount:  1,
         petitor:    petition.petitor
     })
+}
+
+exports.updateLikes = async (petitionid) => {
+    const updatedPetition = await db.petitions.findOne({ where: { petitionid } });
+    db.petitions.update({ likecount: updatedPetition.likecount + 1}, { where: { petitionid } })
 }

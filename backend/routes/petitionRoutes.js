@@ -6,4 +6,6 @@ module.exports = (app) => {
     app.route('/api/petitions').get(petitionController.getAllPetitions)
 
     app.route('/api/petitions').post(petitionController.createPetition)
+
+    app.route('/api/petition/:petition_id').put(petitionController.updatePetition)
 }

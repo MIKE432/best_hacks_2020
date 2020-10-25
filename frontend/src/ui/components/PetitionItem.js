@@ -13,7 +13,7 @@ const PetitionItem = (props) => {
     } = props
 
     const handleClick = () => {
-        apiCall(`http://localhost:8080/api/petitions/${petitionid}`).then(res => callBack())
+        apiCall(`http://localhost:8080/api/petitions/${petitionid}`, "PUT").then(res => callBack())
     }
 
     return (
