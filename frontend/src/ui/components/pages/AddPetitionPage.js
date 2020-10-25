@@ -23,7 +23,7 @@ class AddPetitionPage extends React.Component {
         apiCall('http://localhost:8080/api/petitions', 'POST', {}, body).then(res => {
 
         console.log(res)
-            this.props.history.push('/all-petitions')
+            this.props.history.push('/petitions')
         })
     }
 
