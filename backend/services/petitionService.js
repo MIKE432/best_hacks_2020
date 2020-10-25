@@ -11,11 +11,10 @@ exports.getAllPetitions = async () => {
 }
 
 exports.createPetition = async (petition) => {
-    const createPetition = await db.petition.create({
-        petitionid: petition.name,
+    const createPetition = await db.petitions.create({
         title:      petition.title,
         descript:   petition.descript,
-        likeCount:  petition.likeCount,
+        likecount:  1,
         petitor:    petition.petitor
     })
 }

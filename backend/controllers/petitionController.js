@@ -15,4 +15,5 @@ exports.getAllPetitions = handleErrors(async (req, res) => {
 
 exports.createPetition = handleErrors(async (req, res) => {
     const newPetition = await petitionService.createPetition(req.body)
+    res.sendStatus(200)
 })
