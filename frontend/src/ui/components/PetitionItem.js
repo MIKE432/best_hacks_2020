@@ -13,7 +13,7 @@ const PetitionItem = (props) => {
     } = props
 
     const handleClick = () => {
-        apiCall(`http://localhost:8080/api/petitions/${petitionid}`, "PUT").then(res => callBack())
+        apiCall(`http://localhost:8080/api/petition/${petitionid}`, "PUT").then(res => callBack())
     }
 
     return (
@@ -23,10 +23,10 @@ const PetitionItem = (props) => {
                 <p>{descript}</p>
             </div>
             <div className='petition-item-bottom-container'>
-                <div onClick={handleClick} className='petition-item-bottom-like'>
+                <div  className='petition-item-bottom-like'>
                     <h5>{likecount} osób wsparło</h5>
                 </div>
-                <div className='petition-item-like-button'>
+                <div onClick={handleClick} className='petition-item-like-button'>
                     <i className="far fa-heart fa-2x"></i>
                     <h5>Wesprzyj! </h5>
                 </div>
