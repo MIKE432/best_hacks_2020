@@ -12,3 +12,7 @@ exports.getAllPetitions = handleErrors(async (req, res) => {
     const allPetitions = await petitionService.getAllPetitions()
     res.json(allPetitions)
 })
+
+exports.createPetition = handleErrors(async (req, res) => {
+    const newPetition = await petitionService.createPetition(req.body)
+})
