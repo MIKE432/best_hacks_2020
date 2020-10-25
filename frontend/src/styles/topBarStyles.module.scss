@@ -1,0 +1,50 @@
+.top-bar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.top-bar-logo-container {
+    display: flex;
+    flex-direction: row;
+
+    &:hover {
+        .top-bar-logo {
+            color: green;
+            transition: 1s;
+        }
+
+        cursor: pointer;
+    }
+
+}
+
+.top-bar-links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30%;
+    align-items: center;
+}
+
+.top-bar-add-petition {
+    &:hover {
+        color:green;
+        cursor: pointer;
+        transition: 1s;
+    }
+}
+
+.top-bar-all-petitions {
+    &:hover {
+        color:green;
+        cursor: pointer;
+        transition: 1s;
+    }
+}

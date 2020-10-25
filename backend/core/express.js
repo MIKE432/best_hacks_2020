@@ -5,7 +5,8 @@ const express = require('express'),
       path = require('path'),
       config = require('../core/config'),
       bodyParser = require('body-parser'),
-      cors = require('cors')
+      cors = require('cors'),
+      db = require('./sequalize')
 
 
 exports.initExpress = () => {

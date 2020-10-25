@@ -8,7 +8,6 @@ const
 const sequelize = new sequelizeConstructor(sequelizeDb.databaseName, sequelizeDb.username, sequelizeDb.password, sequelizeDb.options)
 
 const db = {};
-
 paths.models.map(modelPath => {
     // const model = sequelize.import(path.resolve(modelPath));
     const model = require(path.resolve(modelPath))(sequelize, sequelizeConstructor.DataTypes)
@@ -16,3 +15,4 @@ paths.models.map(modelPath => {
 })
 
 module.exports = db
+

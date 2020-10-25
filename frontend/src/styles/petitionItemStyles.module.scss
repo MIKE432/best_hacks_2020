@@ -1,0 +1,33 @@
+.petition-item-container {
+    margin: 10px 0;
+    width: 70%;
+    border-radius: 10px;
+    border: 1px solid green;
+    .petition-item-top-container {
+        padding: 0 30px;
+        margin: 5px 0;
+    }
+
+    .petition-item-bottom-container {
+        border-top: 1px solid green;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 10px;
+    }
+
+    .petition-item-like-button {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        width: 120px;
+
+        &:hover {
+            color:greenyellow;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+    }
+}

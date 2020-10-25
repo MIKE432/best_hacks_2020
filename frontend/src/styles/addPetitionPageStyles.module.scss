@@ -1,0 +1,17 @@
+.add-petition-page-container {
+    width: 100%;
+    min-height: 100vh;
+
+    h1 {
+        margin: 0px;
+         position: relative;
+         width: fit-content;
+         left: 25px;
+         top: 25px;
+    }
+
+    .petition-list {
+        display: flex;
+        flex-direction: column;
+    }
+}
