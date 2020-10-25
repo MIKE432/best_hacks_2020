@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
         surname: { type: DataTypes.CHAR(50), allowNull: false}
     }, {
         tableName: 'users',
+        freezeTableName: true,
         createdAt: false,
         updatedAt: false
     });

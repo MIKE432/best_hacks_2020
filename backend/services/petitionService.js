@@ -1,6 +1,6 @@
 const db = require('../core/sequalize')
 
-exports.getPetition = async (petitionID) => {
-    const petition = await db.petitions.findOne({ where: { petitionID } });
+exports.getPetition = async (petitionid) => {
+    const petition = await db.petitions.findOne({ where: { petitionid } });
     return petition
 }

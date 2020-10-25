@@ -2,16 +2,17 @@
 
 module.exports = (sequelize, DataTypes) => {
     var petition = sequelize.define('petitions', {
-    id: {
+    petitionid: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
     title: { type: DataTypes.CHAR(50), allowNull: false },
-    description: { type: DataTypes.INTEGER, allowNull: false},
-    likeCount: { type: DataTypes.INTEGER, allowNull: false}
+    descript: { type: DataTypes.TEXT, allowNull: false},
+    likecount: { type: DataTypes.INTEGER, allowNull: false}
     }, {
-        tableName: 'Petitions',
+        tableName: 'petitions',
+        freezeTableName: true,
         createdAt: false,
         updatedAt: false
     });

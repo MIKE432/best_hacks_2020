@@ -5,7 +5,7 @@ CREATE TABLE Users(
     surname         CHAR(50) NOT NULL
 );
 
-CREATE TABLE Petitions (
+CREATE TABLE Petitions(
     petitionID      INT PRIMARY KEY NOT NULL,
     title           CHAR(50) NOT NULL,
     descript        TEXT NOT NULL,
